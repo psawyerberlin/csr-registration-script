@@ -1,0 +1,16 @@
+# Deploy the CSR registration type script with a Type ID (upgradable by the deploy key).
+[[cells]]
+name = "csr_registration"
+enable_type_id = true
+location = { file = "build/release/csr-registration" }
+
+# Lock of the deployed code cell = the ckb-cli deploy account (owner, can upgrade).
+[lock]
+code_hash = "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8"
+args = "0x29271eb53eb2d84513511a747cd7c7c7a12a304e"
+hash_type = "type"
+
+[multisig_config]
+sighash_addresses = []
+require_first_n = 0
+threshold = 0
